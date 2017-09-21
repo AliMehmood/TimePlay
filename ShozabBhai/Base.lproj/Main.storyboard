@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eEF-mi-xm5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShozabBhai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQV-aW-0pA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KL0-Ax-7sn"/>
+                                    <constraint firstAttribute="width" constant="89" id="hm6-3P-fBh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on Play Button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oly-ov-6ET">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="qpk-mY-whk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BYc-3V-Pmg"/>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BYc-3V-Pmg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9TH-eq-APA"/>
+                            <constraint firstItem="Oly-ov-6ET" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dor-nR-sRT"/>
+                            <constraint firstAttribute="trailing" secondItem="Oly-ov-6ET" secondAttribute="trailing" constant="90" id="KIU-HT-g0R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BYc-3V-Pmg" secondAttribute="bottom" id="ddR-G8-aV6"/>
+                            <constraint firstItem="BQV-aW-0pA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gvk-LA-iZ1"/>
+                            <constraint firstItem="Oly-ov-6ET" firstAttribute="top" secondItem="BQV-aW-0pA" secondAttribute="bottom" constant="23" id="hTm-Yf-U1l"/>
+                            <constraint firstItem="Oly-ov-6ET" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oJ5-Fw-Fwf"/>
+                            <constraint firstAttribute="trailing" secondItem="BYc-3V-Pmg" secondAttribute="trailing" id="sMK-ZZ-QaG"/>
+                            <constraint firstItem="BYc-3V-Pmg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xer-Kp-lFM"/>
+                            <constraint firstItem="Oly-ov-6ET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="89" id="yg0-5p-fqB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K1P-aE-JcO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="ycQ-CF-0gV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="startTimer:" destination="BYZ-38-t0r" id="EHX-V3-DPa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="clickToPlay" destination="Oly-ov-6ET" id="v6U-nX-LU0"/>
+                        <outlet property="directionImage" destination="BYc-3V-Pmg" id="Cur-L4-xzQ"/>
+                        <outlet property="playbutton" destination="ycQ-CF-0gV" id="ofQ-cj-jDS"/>
+                        <outlet property="timerLbl" destination="BQV-aW-0pA" id="DwG-by-JBl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="88.605697151424295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OeQ-c8-eFK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eEF-mi-xm5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dX3-Lz-hBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kFQ-xB-K9B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GC6-IF-g0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+</document>
